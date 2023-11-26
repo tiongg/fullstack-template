@@ -1,0 +1,21 @@
+version: '3.9'
+
+volumes:
+  ${PROJECT_NAME}-db-volume:
+    name: ${PROJECT_NAME}-postgres-data
+
+services:
+  ${PROJECT_NAME}-db-service:
+    image: postgres
+    container_name: ${PROJECT_NAME}-db
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+    command: -p 5432
+    volumes:
+      - ${PROJECT_NAME}-db-volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: Secr3tPassw0rd123
+      POSTGRES_DB: postgres
+      ALLOW_IP_RANGE: 0.0.0.0/0
