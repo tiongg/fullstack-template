@@ -17,3 +17,5 @@ jspm_packages/
 
 # Next.js
 .next
+
+dist/
