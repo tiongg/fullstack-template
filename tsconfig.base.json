@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@backend/*": ["apps/backend/src/*"],
+      "@components/*": ["packages/ui/src/ui/*"],
       "@frontend/*": ["apps/frontend/src/*"],
       "@utils/*": ["packages/utils/src/*"]
     }

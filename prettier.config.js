@@ -14,6 +14,7 @@ module.exports = {
     '@utils/(.*)$',
     '@backend/(.*)$',
     '@frontend/(.*)$',
+    '@components/(.*)$',
     '^[./]', //Relative imports
   ],
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
