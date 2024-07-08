@@ -58,7 +58,7 @@ async function copyDependencies(files, destinationDirectory) {
   fse.ensureDirSync(destinationDirectory);
   for(const filename of files) {
     if(!filename || !filename.startsWith('node_modules/')) {
-      return;
+      continue;
     }
     const destPath = path.join(destinationDirectory, filename);
     fse.copySync(filename, destPath, {
